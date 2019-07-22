@@ -3,13 +3,14 @@
     class="ag-theme-balham"
     [rowData]="rowData | async"
     [columnDefs]="columnDefs"
+    (gridReady)="onGridReady($event)"
     >
 </ag-grid-angular>
 
 <div class="form-group">
     <label class="col-md-4 control-label" for="singlebutton"></label>
     <div class="col-md-4 center-block">
-        <button type="submit" class="btn btn-secondary">
+        <button class= "btn btn-secondary" (click)="onBtExport()">
             <i class="fa fa-file-excel-o"></i> Export as a Spreadsheet
         </button>
     </div>  
