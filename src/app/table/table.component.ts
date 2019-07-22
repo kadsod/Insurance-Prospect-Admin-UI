@@ -23,8 +23,8 @@ export class TableComponent implements OnInit {
   gridOptions: GridOptions;
   public gridApi: any;
 
-  onBtExport(params: any) {
-    this.gridApi.exportDataAsCsv(params);
+  onBtExport() {
+    this.gridApi.exportDataAsCsv();
   };
 
   onGridReady(params: any) {
