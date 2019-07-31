@@ -17,6 +17,7 @@ export class TableComponent implements OnInit {
     { headerName: 'Zip Code', field: 'zip', sortable: true, filter: true },
     { headerName: 'Gender', field: 'gender', sortable: true, filter: true },
     { headerName: 'Message', field: 'enquiryMessage', sortable: true, filter: true },
+    { headerName: 'Date', field: 'saveDate', sortable: true, filter: true }
   ];
 
   rowData: any;
@@ -25,7 +26,7 @@ export class TableComponent implements OnInit {
 
   onBtExport() {
     this.gridApi.exportDataAsCsv();
-  };
+  }
 
   onGridReady(params: any) {
     this.gridApi = params.api;
