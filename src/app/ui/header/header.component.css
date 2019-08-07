@@ -1,0 +1,17 @@
+.header{
+    border-bottom: 8px solid #294E80;
+    background-color: #294E80;
+    height: 50px; 
+    left:0; 
+    position:fixed; 
+    width:100%; 
+    top:0;
+}
+
+.logo{
+    font-family: "Segoe UI","Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 2.25rem;
+    color: azure;
+    width: 500px;
+    margin-left: 10px;
+}

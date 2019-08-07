@@ -4,3 +4,18 @@
 
 @import "~ag-grid-community/dist/styles/ag-grid.css";
 @import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+
+ul li { float: left; margin-right: 25px;}
+.graybox { float: left; width: 20px; height: 20px; background-color: gray;}
+.cyanbox { float: left; width: 20px; height: 20px; background-color: cyan;}
+.yellowbox { float: left; width: 20px; height: 20px; background-color: yellowgreen;}
+
+.z{
+    display: flex;
+}
+.fixed{
+    width: 200px;
+}
+.flex-item{
+    flex-grow: 1;
+}

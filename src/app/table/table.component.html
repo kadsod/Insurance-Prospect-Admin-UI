@@ -1,17 +1,28 @@
 <ag-grid-angular 
+    #agGrid
     style="width: 100%; height: 500px;" 
     class="ag-theme-balham"
     [rowData]="rowData | async"
     [columnDefs]="columnDefs"
     (gridReady)="onGridReady($event)"
+    [gridOptions]="gridOptions"
     >
 </ag-grid-angular>
 
 <div class="form-group">
     <label class="col-md-4 control-label" for="singlebutton"></label>
-    <div class="col-md-4 center-block">
-        <button class= "btn btn-secondary" (click)="onBtExport()">
-            <i class="fa fa-file-excel-o"></i> Export as a Spreadsheet
-        </button>
-    </div>  
+    <div class="z">
+        <div class="col-md-4 center-block fixed">
+            <button class= "btn btn-secondary" (click)="onBtExport()">
+                <i class="fa fa-file-excel-o"></i> Export as a Spreadsheet
+            </button>
+        </div>
+        <div class="flex-item">
+            <ul>
+                <li><span class="graybox"></span> - Priority C</li>
+                <li><span class="cyanbox"></span> - Priority B</li>
+                <li><span class="yellowbox"></span> - Priority A</li>
+            </ul>
+        </div>
+    </div>
  </div>

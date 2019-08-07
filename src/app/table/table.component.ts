@@ -16,13 +16,25 @@ export class TableComponent implements OnInit {
     { headerName: 'Area', field: 'location', sortable: true, filter: true },
     { headerName: 'Zip Code', field: 'zip', sortable: true, filter: true },
     { headerName: 'Gender', field: 'gender', sortable: true, filter: true },
-    { headerName: 'Message', field: 'enquiryMessage', sortable: true, filter: true },
+    // { headerName: 'Message', field: 'enquiryMessage', sortable: true, filter: true },
     { headerName: 'Date', field: 'saveDate', sortable: true, filter: true }
   ];
 
   rowData: any;
-  gridOptions: GridOptions;
   public gridApi: any;
+
+  gridOptions: GridOptions = {
+    getRowStyle(params) {
+      if (params.data.score >= 10 && params.data.score <= 30) {
+        return { 'background-color': 'grey' };
+      } else if (params.data.score >= 30 && params.data.score <= 40) {
+        return { 'background-color': 'cyan' };
+      } else if (params.data.score >= 40) {
+        return { 'background-color': 'yellowgreen' };
+      }
+      return null;
+    }
+  }
 
   onBtExport() {
     this.gridApi.exportDataAsCsv();
@@ -32,10 +44,7 @@ export class TableComponent implements OnInit {
     this.gridApi = params.api;
   }
 
-
-  constructor(private http: HttpClient) {
-
-  }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
     this.rowData = this.http.get('https://insurance-prospect-backend.cfapps.io/data/getAllUsers');
